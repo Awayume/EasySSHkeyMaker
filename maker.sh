@@ -18,8 +18,6 @@ echo なお、パスワードは入力しても表示されませんが、ちゃ
 echo @@@@@@@@@@@@@@@
 echo @作成を開始します@
 echo @@@@@@@@@@@@@@@
-echo GitHubのユーザー名を入力してください。
-read USERNAME
 echo SSHキーの作成に使用する、GitHubに登録したメールアドレスを入力してください。
 read MAILADDRES
 ssh-keygen -t rsa -b 4096 -C "$MAILADDRES"

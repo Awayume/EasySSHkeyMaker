@@ -5,4 +5,5 @@ GitHub用のSSHキーを簡単に作成します。
 ②maker.shを呼び出します。  
 ③画面の指示にしたがいます。
 # 対応しているデバイス
-現在、AndroidのTermuxにのみ対応しています。
+現在、AndroidのTermuxにのみ対応しています。  
+近々Windows、Mac、Linuxにも対応させる予定です。

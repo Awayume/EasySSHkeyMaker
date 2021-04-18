@@ -16,6 +16,7 @@ wget https://github.com/Awayume/EasySSHkeyMaker/raw/Updater/VersionCodeInfo.txt
 cd $home
 diff ~/EasySSHkeyMaker/date/VersionCodeInfo.txt ~/EasySSHkeyMaker/update/VersionCodeInfo.txt
 if [ $? -eq 1 ]; then
+  rm -rf EasySSHkeyMaker
   echo ================================
   echo 新バージョンが公開されています。
   echo アップデートを実行します。
@@ -24,6 +25,7 @@ if [ $? -eq 1 ]; then
   chmod 755 ./updater.sh
   ./updater.sh
 fi
+rm -rf EasySSHkeyMaker
 # 起動時の処理
 echo SSHキーを作成するために必要なパッケージをインストールします。
 echo 途中でインストールするか聞かれるので、全てyを入力してEnterを押してください。

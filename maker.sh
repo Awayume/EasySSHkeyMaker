@@ -1,20 +1,21 @@
-#!/biln/sh
+#!/bin/sh
 
 # 起動時のメッセージ
 echo 準備しています...
+pkg install wget | y
 # アップデートチェック
 cd $home
-mkdir EasySSHkeyMaker
-cd EasySSHkeyMaker
-mkdir date
+mkdir .EasySSHkeyMaker
+cd .EasySSHkeyMaker
+mkdir data
 mkdir update
-cd date
-wget https://github.com/Awayume/EasySSHkeyMaker/releases/download/v2.0/VersionCodeInfo.txt
+cd data
+wget https://github.com/Awayume/EasySSHkeyMaker/releases/download/v2.1/VersionCodeInfo.txt
 cd $home
-cd ~/EasySSHkeyMaker/update
+cd ~/.EasySSHkeyMaker/update
 wget https://github.com/Awayume/EasySSHkeyMaker/raw/Updater/VersionCodeInfo.txt
 cd $home
-diff ~/EasySSHkeyMaker/date/VersionCodeInfo.txt ~/EasySSHkeyMaker/update/VersionCodeInfo.txt
+diff ~/.EasySSHkeyMaker/date/VersionCodeInfo.txt ~/EasySSHkeyMaker/update/VersionCodeInfo.txt
 if [ $? -eq 1 ]; then
   rm -rf EasySSHkeyMaker
   echo ================================
